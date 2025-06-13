@@ -35,6 +35,8 @@ const AuthorityRegister = () => {
           role,
         }
       );
+      window.sessionStorage.setItem('username',username);
+      console.log(window.sessionStorage.getItems('username'));
       setSuccess(true);
       setErr(false);
     } catch (err) {
