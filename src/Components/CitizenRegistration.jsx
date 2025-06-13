@@ -28,6 +28,7 @@ const CitizenRegistration = () => {
           phoneno,
         }
       );
+      window.sessionStorage.setItem('username',username);
       setSuccess(true);
       setErr(false);
       navigate('/otp');
