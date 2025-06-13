@@ -16,6 +16,7 @@ const App = () => {
         <Route element={<Register />} path="/register"></Route>
         <Route element={<AuthorityRegister />} path="/register/authority"></Route>
         <Route element={<CitizenRegistration/>} path="/register/citizen"> </Route>
+        <Route element={<OTP/> path='/otp'></Route>
       </Routes>
     </div>
   );
