@@ -30,6 +30,9 @@ const AuthorityRegister = () => {
           password,
           email,
           phoneno,
+          district,
+          village,
+          role,
         }
       );
       setSuccess(true);
@@ -98,10 +101,7 @@ const AuthorityRegister = () => {
           </Tooltip>
         </div>
       </nav>
-      <div
-        id="remainingDiv"
-        className="h-dvh flex items-center justify-center"
-      >
+      <div id="remainingDiv" className="h-dvh flex items-center justify-center">
         <div
           id="subDiv"
           className="h-full w-full border border-indigo-600 flex flex-col justify-evenly items-center"
