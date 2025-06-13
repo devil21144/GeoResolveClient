@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import AuthorityRegister from "./Components/AuthorityRegister";
+import OTP from "./Components/OTP";
 import CitizenRegistration from "./Components/CitizenRegistration";
 
 const App = () => {
