@@ -38,6 +38,7 @@ const AuthorityRegister = () => {
       window.sessionStorage.setItem('username',username);
       setSuccess(true);
       setErr(false);
+      navigate('/otp');
     } catch (err) {
       const message =
         err.response?.message || err.message || "Internal Server error";
