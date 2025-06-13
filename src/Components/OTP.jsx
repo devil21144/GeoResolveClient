@@ -29,7 +29,7 @@ const OTP = () => {
     <div className="h-dvh w-dvw flex items-center justify-center">
       <div
         id="subDiv"
-        className="h-1/3 w-1/3 border border-indigo-600 flex  flex-col items-center justify-evenly"
+        className="h-1/2 w-1/2 border border-indigo-600 flex  flex-col items-center justify-evenly"
       >
         <h1>OTP Verification</h1>
         <TextField
