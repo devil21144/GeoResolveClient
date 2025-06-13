@@ -23,7 +23,7 @@ const AuthorityRegister = () => {
   const handleSubmit = async () => {
     try {
       const results = await axios.post(
-        "http://localhost:5001/register/citizen",
+        "//https://georesolveserver.onrender.com/register/citizen",
         {
           username,
           age,
