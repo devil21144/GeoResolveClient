@@ -40,7 +40,7 @@ const OTP = () => {
         />
         {err && <Alert severity="error">{errMessage}</Alert>}
         {success && <Alert severity="success">Registration Successful</Alert>}
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={handleSubmit}>
           Verify
         </Button>
       </div>
