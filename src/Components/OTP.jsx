@@ -9,25 +9,28 @@ const OTP = () => {
   const [success, setSuccess] = useState();
   const [errMessage, setErrorMessage] = useState();
   const handleSubmit = async () => {
-    const username = window.sessionStorage.getItem('username');
+    const username = window.sessionStorage.getItem("username");
     try {
-      const results = await axios.post('https://georesolveserver.onrender.com/otp', {
+      const results = await axios.post("http://localhost:5001/otp", {
         otp,
-        username
-      })
-      setError('false');
+        username,
+      });
+      setError("false");
       setSuccess(true);
-    }
-    catch (err) {
-      const message = err.response?.data?.message || err.message || 'Internal Server Error';
-      setError('true');
+    } catch (err) {
+      const message =
+        err.response?.data?.message || err.message || "Internal Server Error";
+      setError("true");
       setErrorMessage(message);
       setSuccess(false);
     }
-  }
+  };
   return (
     <div className="h-dvh w-dvw flex items-center justify-center">
-      <div id="subDiv" className="h-1/3 w-1/3 border border-indigo-600 flex  flex-col items-center justify-evenly">
+      <div
+        id="subDiv"
+        className="h-1/3 w-1/3 border border-indigo-600 flex  flex-col items-center justify-evenly"
+      >
         <h1>OTP Verification</h1>
         <TextField
           inputProps={{ type: "number" }}
@@ -35,7 +38,11 @@ const OTP = () => {
           label="OTP"
           required
         />
-        <Button variant="contained" color="secondary">Verify</Button>
+        {err && <Alert severity="error">{errMessage}</Alert>}
+        {success && <Alert severity="success">Registration Successful</Alert>}
+        <Button variant="contained" color="secondary">
+          Verify
+        </Button>
       </div>
     </div>
   );
