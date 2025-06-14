@@ -15,12 +15,12 @@ const OTP = () => {
         otp,
         username,
       });
-      setError("false");
+      setError(false);
       setSuccess(true);
     } catch (err) {
       const message =
         err.response?.data?.message || err.message || "Internal Server Error";
-      setError("true");
+      setError(true);
       setErrorMessage(message);
       setSuccess(false);
       console.log(err.response);
