@@ -23,6 +23,7 @@ const OTP = () => {
       setError("true");
       setErrorMessage(message);
       setSuccess(false);
+      console.log(message);
     }
   };
   return (
