@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const OTP = () => {
+  const navigate = useNavigate();
   const [otp, setOtp] = useState();
   const [err, setError] = useState();
   const [success, setSuccess] = useState();
@@ -11,14 +13,17 @@ const OTP = () => {
   const handleSubmit = async () => {
     const username = window.sessionStorage.getItem("username");
     try {
-      const results = await axios.post("https://georesolveserver.onrender.com/otp", {
-        otp,
-        username,
-      });
+      const results = await axios.post(
+        "https://georesolveserver.onrender.com/otp",
+        {
+          otp,
+          username,
+        }
+      );
       setError(false);
       setSuccess(true);
-      if(results.statusText=='OK'){
-        navigate('/login');
+      if (results.statusText == "OK") {
+        navigate("/login");
       }
     } catch (err) {
       const message =
@@ -41,7 +46,9 @@ const OTP = () => {
           value={otp}
           label="OTP"
           required
-          onChange={(e)=>{setOtp(e.target.value)}}
+          onChange={(e) => {
+            setOtp(e.target.value);
+          }}
         />
         {err && <Alert severity="error">{errMessage}</Alert>}
         {success && <Alert severity="success">Registration Successful</Alert>}
