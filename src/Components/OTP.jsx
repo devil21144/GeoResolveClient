@@ -17,6 +17,9 @@ const OTP = () => {
       });
       setError(false);
       setSuccess(true);
+      if(results.statusText=='OK'){
+        navigate('/login');
+      }
     } catch (err) {
       const message =
         err.response?.data?.message || err.message || "Internal Server Error";
