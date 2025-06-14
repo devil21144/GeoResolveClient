@@ -34,7 +34,7 @@ const CitizenRegistration = () => {
       navigate('/otp');
     } catch (err) {
       const message =
-        err.response?.message || err.message || "Internal Server error";
+        err.response?.data?.message || err.message || "Internal Server error";
       const code = err.response?.status || err.statusCode || 500;
       setErr(true);
       setSuccess(false);
