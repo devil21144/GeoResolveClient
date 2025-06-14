@@ -37,7 +37,7 @@ const OTP = () => {
           value={otp}
           label="OTP"
           required
-          onChange((e)=>{setOtp(e.target.value)});
+          onChange={(e)=>{setOtp(e.target.value)}}
         />
         {err && <Alert severity="error">{errMessage}</Alert>}
         {success && <Alert severity="success">Registration Successful</Alert>}
