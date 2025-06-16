@@ -34,7 +34,7 @@ const Home = () => {
           <nav className="text-white mt-6 flex flex-col items-center">
             <a href="#">{sidebarOpen ? "Home" : <House />}</a>
             <br />
-            <a href="#">{sidebarOpen ? "Login" : <LogIn />}</a>
+            <a href="/login">{sidebarOpen ? "Login" : <LogIn />}</a>
             <br />
             <a href="/register">{sidebarOpen ? "Register" : "R"}</a>
             <br />
