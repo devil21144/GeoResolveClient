@@ -7,6 +7,9 @@ import Register from "./Components/Register";
 import AuthorityRegister from "./Components/AuthorityRegister";
 import CitizenRegistration from "./Components/CitizenRegistration";
 import OTP from "./Components/OTP";
+import CitizenLogin from "./Components/CitizenLogin";
+import AuthorityLogin from "./Components/AuthorityLogin";
+import AdminLogin from "./Components/AdminLogin";
 
 const App = () => {
   return (
@@ -17,7 +20,10 @@ const App = () => {
         <Route element={<Register />} path="/register"></Route>
         <Route element={<AuthorityRegister />} path="/register/authority"></Route>
         <Route element={<CitizenRegistration />} path="/register/citizen"> </Route>
-        <Route element={<OTP/>} path="/otp"></Route>
+        <Route element={<OTP />} path="/otp"></Route>
+        <Route path="/login/citizen" element={<CitizenLogin />}></Route>
+        <Route path="/login/authority" element={<AuthorityLogin />}></Route>
+        <Route path="/login/admin" element={<AdminLogin/>}></Route>
       </Routes>
     </div>
   );
