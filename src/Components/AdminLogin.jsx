@@ -14,7 +14,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const handleSubmit = async () => {
     try {
-      const results = await axios.post("http://localhost:5001/login/admin", {
+      const results = await axios.post("https://georesolveserver.onrender.com/login/admin", {
         username,
         password,
       });
