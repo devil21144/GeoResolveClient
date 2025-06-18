@@ -17,7 +17,7 @@ const CitizenLogin = () => {
   const navigate = useNavigate();
   const handleSubmit = async () => {
     try {
-      const results = await axios.post("http://localhost:5001/login/citizen", {
+      const results = await axios.post("https://georesolveserver.onrender.com/login/citizen", {
         username,
         password,
       });
