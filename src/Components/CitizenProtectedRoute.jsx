@@ -11,7 +11,7 @@ const CitizenProtectedRoute = () => {
     // simulate delay to ensure sessionStorage is read
     setTimeout(() => {
       setIsAuth(role === "citizen" && isLoggedIn === "true");
-    }, 0); // can also try 100ms
+    }, 100); // can also try 100ms
   }, []);
 
   if (isAuth === null) return <div>Loading...</div>;
