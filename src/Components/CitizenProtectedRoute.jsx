@@ -1,15 +1,21 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
+
 const CitizenProtectedRoute = () => {
   const [isAuth, setIsAuth] = useState(null);
+
   useEffect(() => {
     const role = window.sessionStorage.getItem("role");
     const isLoggedIn = window.sessionStorage.getItem("isLoggedIn");
-    setIsAuth(role === "citizen" && isLoggedIn=== "true");
+
+    // simulate delay to ensure sessionStorage is read
+    setTimeout(() => {
+      setIsAuth(role === "citizen" && isLoggedIn === "true");
+    }, 0); // can also try 100ms
   }, []);
-    if (isAuth === null) return null;
+
+  if (isAuth === null) return <div>Loading...</div>;
+
   return isAuth ? <Outlet /> : <Navigate to="/login" />;
 };
 
