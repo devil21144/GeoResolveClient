@@ -1,5 +1,6 @@
 import React from "react";
 import "./output.css";
+import { Analytics } from "@vercel/analytics/react"
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
