@@ -84,7 +84,7 @@ const CitizenLogin = () => {
         id="remainingDiv"
         className="h-dvh flex flex-col items-center justify-center"
       >
-        <div className="border border-indigo-600 h-1/2 w-1/3 flex flex-col items-center justify-evenly">
+        <div className="border border-indigo-600 h-1/2 w-1/2 flex flex-col items-center justify-evenly">
           <TextField
             label="Username"
             value={username}
