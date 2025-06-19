@@ -24,7 +24,7 @@ const AuthorityRegister = () => {
     window.sessionStorage.setItem("username", username);
     try {
       const results = await axios.post(
-        "http://localhost:5001/register/authority",
+        "https://georesolveserver.onrender.com/register/authority",
         {
           username,
           age,
